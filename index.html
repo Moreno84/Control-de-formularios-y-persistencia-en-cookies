@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5</title>
+    <script src="index.js" defer></script>
+</head>
+<body>
+
+    <form name="miFormulario" id="form" action="codigo.php" method="get">
+
+    Usuario: <input type="text" name="usuario" id="usuario" placeholder="usuario" required><br><span id="msg_usuario"></span><br><br>
+
+    Password: <input type="password" name="password" id="password" placeholder="Password" required></div><br><br>
+
+    Confirmar Password: <input type="password" name="confirmaPassword" id="confirmaPassword" placeholder="Confirmar Password"required><br>
+    <div id="noMatchPsw"></div>
+    <span id="incorrectPsw"></span><br>
+    <span id="Msg_correcto"></span><br>
+
+    Email: <input type="email" name="email" id="email" placeholder="Email" required><br><span id="msg_email"></span><br><br>
+
+    Tus aficiones: <select name="listado" id="listado" multiple>
+                   <option value="Programar">Programar</option>
+                   <option value="Leer">Leer</option>   
+                   <option value="Cantar">Cantar</option> 
+                   <option value="Bailar">Bailar</option>
+                   </select><br><span id="resultado"></span><br><br>
+
+    DNI: <input type="text" name="dni" id="dni" placeholder="DNI" required><br><span id="msg_dni"></span><br><br>
+
+    Acepto las condiciones <input type="checkbox" id="checkbox" name="checkbox" checked required onchange="validarCheckBox()"><br><span id="msg_condicion"></span><br><br>
+
+    <input type="button" name="registrate" id="btnRgto" value="Registrate" >
+    <input type="button" name="guardarDatos" onclick="return guardarCookie()" value="Guardar Datos">
+    <input type="button" name="RecuperarDatos" onclick="return recuperarCookie()" value="Recuperar Datos"><br><br>
+
+    Nueva afición: <input type="text" id="aficion" placeholder="Nueva Aficion" name="inputAficion"> <input type="button" name="añadirAfición" onclick="nuevaAficion()" value="Añadir Afición">
+
+
+
+   </form>
+    
+</body>
+</html>
